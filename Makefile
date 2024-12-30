@@ -14,4 +14,7 @@ main: $(OBJ)
 clean:
 	rm -rf *.o main
 
+install: main
+	cp -v main /usr/local/bin
+
 

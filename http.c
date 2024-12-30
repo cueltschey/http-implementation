@@ -100,6 +100,14 @@ void http_response_file(const char *file_name, const char *file_ext,
 
   mime_type mime = get_mime_type(file_ext);
   char *header = (char *)malloc(MAX_BUFFER_SIZE * sizeof(char));
+
+  const char *mime_type_txt[MIME_COUNT] = {"text/html",
+                                           "text/plain",
+                                           "image/jpeg",
+                                           "image/png",
+                                           "application/json",
+                                           "application/xml",
+                                           "application/octet-stream"};
   snprintf(header, MAX_BUFFER_SIZE,
            "HTTP/1.1 200 OK\r\n"
            "Content-Type: %s\r\n"
