@@ -18,7 +18,6 @@
 #define MIME_COUNT 7
 #define MAX_BUFFER_SIZE 104857600
 
-/*
 static const char *mime_type_txt[MIME_COUNT] = {"text/html",
                                                 "text/plain",
                                                 "image/jpeg",
@@ -26,7 +25,6 @@ static const char *mime_type_txt[MIME_COUNT] = {"text/html",
                                                 "application/json",
                                                 "application/xml",
                                                 "application/octet-stream"};
-*/
 
 typedef enum {
   MIME_TEXT_HTML,
@@ -39,6 +37,8 @@ typedef enum {
 } mime_type;
 
 void handle_error(int status_code, const char *err);
+
+mime_type get_mime_type(const char *file_ext);
 
 const char *get_mime_txt(mime_type t);
 
