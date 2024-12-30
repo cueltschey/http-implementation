@@ -1,8 +1,7 @@
 CC=gcc
 CFLAGS=-I. -Wall -Werror
 DEPS=
-#OBJ=http.o main.o
-OBJ=main.o
+OBJ=http.o main.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
